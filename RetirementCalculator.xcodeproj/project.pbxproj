@@ -101,7 +101,6 @@
 				E4195F85D58BB4965CA9A291 /* Pods-RetirementCalculatorTests.debug.xcconfig */,
 				A9B420E24F5E394DE62351B4 /* Pods-RetirementCalculatorTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -549,13 +548,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LZY5Z4A3XU;
+				DEVELOPMENT_TEAM = K5X38X8VRC;
 				INFOPLIST_FILE = RetirementCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.RetirementCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.RetCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -568,13 +567,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LZY5Z4A3XU;
+				DEVELOPMENT_TEAM = K5X38X8VRC;
 				INFOPLIST_FILE = RetirementCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.RetirementCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = org.gdelgado.RetCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
