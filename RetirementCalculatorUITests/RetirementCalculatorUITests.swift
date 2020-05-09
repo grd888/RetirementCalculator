@@ -31,9 +31,7 @@ class RetirementCalculatorUITests: XCTestCase {
             
             let app = XCUIApplication()
             app.launch()
-            
             let monthlyInvestmentsTextField = app.textFields["Monthly investments"]
-            monthlyInvestmentsTextField.tap()
             monthlyInvestmentsTextField.tap()
             
             let key = app/*@START_MENU_TOKEN@*/.keys["1"]/*[[".keyboards.keys[\"1\"]",".keys[\"1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
@@ -57,9 +55,15 @@ class RetirementCalculatorUITests: XCTestCase {
             
             let key5 = app/*@START_MENU_TOKEN@*/.keys["4"]/*[[".keyboards.keys[\"4\"]",".keys[\"4\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
             key5.tap()
+            
             app.textFields["Current savings"].tap()
             key2.tap()
-            app/*@START_MENU_TOKEN@*/.staticTexts["Calculate retirement amount"]/*[[".buttons[\"Calculate retirement amount\"].staticTexts[\"Calculate retirement amount\"]",".staticTexts[\"Calculate retirement amount\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+            
+            
+            //app.staticTexts["Calculate retirement amount"].tap(wait: 20, test: self)
+            
+            let button = app.buttons.element(matching: .any, identifier: "calculateButton")
+            button.tap()
             
             let resultText = app.staticTexts.element(matching: .any, identifier: "resultLabel")
             let result = "If you save $100.0 every month for 9 years, and invest that money plus your current investment of $0.0 at a 4.0% anual interest rate, you will have $13017.392178852759 by the time you are 65"
@@ -67,13 +71,15 @@ class RetirementCalculatorUITests: XCTestCase {
         }
     }
 
-//    func testLaunchPerformance() throws {
-//        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-//            // This measures how long it takes to launch your application.
-//            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-//                XCUIApplication().launch()
-//            }
-//        }
-//    }
+}
+
+extension XCUIElement {
+    func tap(wait: Int, test: XCTestCase) {
+        if !isHittable {
+            test.expectation(for: NSPredicate(format: "hittable == true"), evaluatedWith: self, handler: nil)
+            test.waitForExpectations(timeout: TimeInterval(wait), handler: nil)
+        }
+        tap()
+    }
 }
 
