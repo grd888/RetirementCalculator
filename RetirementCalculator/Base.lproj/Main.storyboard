@@ -51,10 +51,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter some values to calculate your retirement amount." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTh-4v-Hxo">
-                                <rect key="frame" x="20" y="292" width="374" height="82"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="Vlp-fF-6KN"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="292" width="374" height="41"/>
+                                <accessibility key="accessibilityConfiguration" identifier="resultLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
