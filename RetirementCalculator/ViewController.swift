@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     }
     
     func calculateRetirementAmount(current_age: Int, retirement_age : Int, monthly_investment: Float, current_savings: Float, interest_rate: Float) -> Double {
+        
         let months_until_retirement = (retirement_age - current_age) * 12
         
         var retirement_amount = Double(current_savings) * pow(Double(1+interest_rate/100), Double(months_until_retirement))
@@ -48,7 +49,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateButton_TouchUpInside(_ sender: Any) {
-        //MSCrashes.generateTestCrash()
         let current_age = Int(ageTextField.text!)
         let planned_retirement_age = Int(retirementAgeTextField.text!)
         let monthly_investment : Float? = Float(monthlyInvestmentsTextField.text!)
