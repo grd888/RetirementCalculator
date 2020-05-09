@@ -63,8 +63,5 @@ class ViewController: UIViewController {
                           "planned_retirement_age": String(planned_retirement_age!)]
         MSAnalytics.trackEvent("calculate_retirement_amount", withProperties: properties)
     }
-    
-
-
 }
 
